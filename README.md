@@ -1,0 +1,1 @@
+# vamoscoin.github.io
