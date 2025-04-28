@@ -901,22 +901,11 @@
                 isDarkTheme = savedTheme === 'dark';
             } else {
                 // Otherwise use system preference
-                const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                isDarkTheme = prefersDarkMode;
+                isDarkTheme = true;
             }
 
             // Apply initial theme
             applyTheme();
-
-            // Listen for system theme changes
-            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            darkModeMediaQuery.addEventListener('change', (e) => {
-                // Only update if user hasn't set a preference
-                if (!localStorage.getItem('theme')) {
-                    isDarkTheme = e.matches;
-                    applyTheme();
-                }
-            });
 
             // Event listener for theme switch
             themeSwitch.addEventListener('click', toggleTheme);
