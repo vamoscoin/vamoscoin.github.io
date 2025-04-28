@@ -861,7 +861,6 @@
                     htmlElement.classList.remove('light-theme');
                     themeSwitch.innerHTML = '<i class="bi bi-sun-fill"></i>';
 
-                    // 다크모드에서는 섹션별 원래 배경색 적용
                     document.querySelectorAll('.section-bg-1').forEach(section => {
                         section.style.backgroundColor = 'rgba(35, 35, 35, 0.3)';
                     });
@@ -872,7 +871,6 @@
                     htmlElement.classList.add('light-theme');
                     themeSwitch.innerHTML = '<i class="bi bi-moon-fill"></i>';
 
-                    // 라이트모드에서는 섹션별 배경색 교대로 적용
                     document.querySelectorAll('.section-bg-1').forEach(section => {
                         section.style.backgroundColor = 'var(--section-odd-bg)';
                     });
